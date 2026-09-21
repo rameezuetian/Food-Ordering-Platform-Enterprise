@@ -2,6 +2,7 @@ import express, { type Request, type Response } from "express";
 import cors from "cors";
 import "dotenv/config";
 import mongoose from "mongoose";
+import myUserRoute from "./routes/MyUserRoute.js"
 import dns from "dns";
 
 // Use Google DNS for Node.js DNS resolution
@@ -18,6 +19,9 @@ app.use(cors());
 app.get("/test", async (req: Request, res: Response) => {
     res.json({ message: "Hello" });
 });
+
+
+app.use("/api/my/user" , myUserRoute);
 
 const PORT = 3000;
 const MONGO_URI = process.env.MONGO_URI;
