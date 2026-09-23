@@ -5,10 +5,10 @@
   "main": "./src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon"
+    "dev": "nodemon --exec ts-node ./src/index.ts",
+    "build": "tsc"
   },
   "keywords": [],
-  "type": "module",
   "dependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
@@ -23,6 +23,7 @@
     "mongoose": "^9.10.1"
   },
   "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
     "nodemon": "^3.1.14",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"

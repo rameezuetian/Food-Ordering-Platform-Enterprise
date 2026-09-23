@@ -1,9 +1,7 @@
-declare module "jsonwebtoken";
-
 import type { Request, Response, NextFunction } from "express";
 import { auth } from "express-oauth2-jwt-bearer";
 import jwt from "jsonwebtoken";
-import User from "../models/user.js";
+import User from "../models/user";
 
 const audience = process.env.AUTH0_AUDIENCE;
 const issuerBaseURL = process.env.AUTH0_ISSUER_BASE_URL;

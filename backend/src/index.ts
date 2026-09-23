@@ -2,7 +2,7 @@ import express, { type Request, type Response } from "express";
 import cors from "cors";
 import "dotenv/config";
 import mongoose from "mongoose";
-import myUserRoute from "./routes/MyUserRoute.js"
+import myUserRoute from "./routes/MyUserRoute";
 import dns from "dns";
 
 // Use Google DNS for Node.js DNS resolution
